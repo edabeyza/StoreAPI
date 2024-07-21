@@ -1,10 +1,9 @@
 "use strict"
-
-const { user } = require('../controllers/userController')
-
 /*------------------------------------------------
              STORE API WITH MONGODB
 -------------------------------------------------*/
+
+const { user } = require('../controllers/userController')
 
 // For importing Router
 const router = require('express').Router()
