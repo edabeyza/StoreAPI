@@ -49,7 +49,8 @@ module.exports.user = {
 
         res.status(202).send({
             error: false,
-            result: data
+            result: data,
+            new: await User.findOne({ _id:req.params.userId})
         })
     },
 
