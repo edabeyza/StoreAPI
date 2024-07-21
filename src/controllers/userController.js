@@ -57,7 +57,10 @@ module.exports.user = {
     delete: async (req, res) => {
 
         const data = await User.deleteOne({ _id:req.params.userId})
+
+        res.status(204).send({
+            error: false,
+            result: data
+        })
     }
-
-
 }
