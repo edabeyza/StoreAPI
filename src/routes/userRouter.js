@@ -10,7 +10,7 @@ const router = require('express').Router()
 
 router.route('/')
     .get(user.list)
-    .create(user.create)
+    .post(user.create)
 
 router.route('/:userId')
     .get(user.read)

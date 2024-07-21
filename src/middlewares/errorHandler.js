@@ -14,4 +14,5 @@ module.exports = (err, req, res, next) => {
         cause: err.cause
         // stack: err.stack
     })
+    console.log(data)
 }

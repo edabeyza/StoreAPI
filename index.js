@@ -31,6 +31,8 @@ require('express-async-errors')
 // For connecting the DB
 require('./src/dbConnection')()
 
+app.use('/store', require('./src/routes/productsRouter'))
+app.use('/user', require('./src/routes/userRouter'))
 
 /*------------------------------------------------*/
 

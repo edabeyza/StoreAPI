@@ -109,7 +109,9 @@ module.exports.storeProducts = {
 
         res.status(202).send({
             error: false,
-            result: data
+            result: data,
+            new: await StoreProducts.findOne({_id:req.params.productId})
+
         })
     },
 

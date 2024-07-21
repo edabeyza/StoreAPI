@@ -10,25 +10,25 @@ const router = require('express').Router()
 
 // Category
 router.route('/category')
-    .get(user.list)
-    .create(user.create)
+    .get(storeCategory.list)
+    .post(storeCategory.create)
 
-router.route('/:categoryId')
-    .get(user.read)
-    .put(user.update)
-    .patch(user.update)
-    .delete(user.delete)
+router.route('category/:categoryId')
+    .get(storeCategory.read)
+    .put(storeCategory.update)
+    .patch(storeCategory.update)
+    .delete(storeCategory.delete)
 
 // Products
-router.route('/products')
-    .get(user.list)
-    .create(user.create)
+router.route('/product')
+    .get(storeProducts.list)
+    .post(storeProducts.create)
 
-router.route('/:productId')
-    .get(user.read)
-    .put(user.update)
-    .patch(user.update)
-    .delete(user.delete)
+router.route('/product/:productId')
+    .get(storeProducts.read)
+    .put(storeProducts.update)
+    .patch(storeProducts.update)
+    .delete(storeProducts.delete)
 
 
 module.exports = router
