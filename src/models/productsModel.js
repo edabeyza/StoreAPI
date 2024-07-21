@@ -16,7 +16,7 @@ const StoreCategorySchema = mongoose.Schema(
             require: true
         }
 
-        // createdAt and updatedAt will be created automathicly
+        // createdAt and updatedAt will be created automatically
 
     },
     {
@@ -30,8 +30,53 @@ const StoreProductsSchema = mongoose.Schema(
         //_id
 
         categoryId: {
-            type: 
-        }
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'StoreCategory',
+            required: true
+        },
+
+        title: {
+            type: String,
+            trim: true,
+            required: true
+        },
+
+        description: {
+            type: String,
+            trim: true,
+            required: true
+        },
+        
+        price: {
+            type: Number,
+            required:true
+        },
+
+        discountPercentage: {
+            type: Number,
+            required: true
+        },
+
+        rating: {
+            type: Number,
+            required: true
+        },
+        
+        stock: {
+            type: Number,
+            required: true
+        },
+
+        brand: {
+            type: String,
+            required: true
+        },
+
+        thumbnail: String,
+
+        images: String
+
+        // createdAt and updatedAt will be created automatically
     },
     {
         collection: 'storeProducts',
@@ -39,4 +84,8 @@ const StoreProductsSchema = mongoose.Schema(
     }
 )
 
-module.exports = ({ StoreCategory: mongoose.model('StoreCategory', StoreCategorySchema)})
+// For exporting Models
+module.exports = ({ 
+    StoreCategory: mongoose.model('StoreCategory', StoreCategorySchema),
+    StoreProducts: mongoose.model('StoreProducts', StoreProductsSchema)
+})
