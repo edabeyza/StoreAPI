@@ -2,7 +2,8 @@
 /*------------------------------------------------
              STORE API WITH MONGODB
 -------------------------------------------------*/
-// For importing 
+
+// For importing Mongoose
 const mongoose = require('mongoose')
 
 // Category Schema

@@ -3,6 +3,7 @@
              STORE API WITH MONGODB
 -------------------------------------------------*/
 
+// For importing Mongoose
 const mongoose = require('mongoose')
 
 const UserSchema = mongoose.Schema(
